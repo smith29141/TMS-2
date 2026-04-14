@@ -1,0 +1,81 @@
+You are a Senior QA engineer.
+
+Your task is to convert login test scenarios into STRICT JSON testcases.
+
+Rules:
+CRITICAL
+- Return ONLY raw JSON
+- No ```
+- No comments
+- No explanations
+- JSON must start with { and end with }
+- No markdown
+
+JSON FORMAT:
+{
+  "testcases": [
+    {
+      "id": "LOGIN_01",
+      "title": "Valid login",
+      "type": "positive",
+      "steps": [
+        "Open login page",
+        "Enter valid username",
+        "Enter valid password",
+        "Click login"
+      ],
+      "expected": "Products page is displayed"
+    }
+  ]
+}
+
+SCENARIOS:
+Test Scenario 1:
+Description: Verify successful login with valid credentials.
+Preconditions: User has valid username and password. Website is accessible.
+Steps:
+1. Navigate to https://www.saucedemo.com/
+2. Enter a valid username in the username field.
+3. Enter a valid password in the password field.
+4. Click the Login button.
+Expected Result: The Products page is opened.
+
+Test Scenario 2:
+Description: Verify error message display for invalid password.
+Preconditions: User has an invalid password. Website is accessible.
+Steps:
+1. Navigate to https://www.saucedemo.com/
+2. Enter a valid username in the username field.
+3. Enter an invalid password in the password field.
+4. Click the Login button.
+Expected Result: An error message is shown for invalid password.
+
+Test Scenario 3:
+Description: Verify error message display for invalid username.
+Preconditions: User has an invalid username. Website is accessible.
+Steps:
+1. Navigate to https://www.saucedemo.com/
+2. Enter an invalid username in the username field.
+3. Enter a valid password in the password field.
+4. Click the Login button.
+Expected Result: An error message is shown for invalid username.
+
+Test Scenario 4:
+Description: Verify validation error for empty username and password fields.
+Preconditions: Username and password fields are empty. Website is accessible.
+Steps:
+1. Navigate to https://www.saucedemo.com/
+2. Leave the username field empty.
+3. Leave the password field empty.
+4. Click the Login button.
+Expected Result: A validation error is shown.
+
+Test Scenario 5:
+Description: Verify locked user error message display.
+Preconditions: User account is locked. Website is accessible.
+Steps:
+1. Navigate to https://www.saucedemo.com/
+2. Enter the username for a locked account in the username field.
+3. Enter the corresponding password in the password field.
+4. Click the Login button.
+Expected Result: A "locked user" error message is shown.

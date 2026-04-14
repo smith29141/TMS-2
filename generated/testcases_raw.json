@@ -1,0 +1,45 @@
+{
+  "id": "gen-1776186681-p15v4SxHWdTkgAIRlM10",
+  "object": "chat.completion",
+  "created": 1776186681,
+  "model": "google/gemini-2.5-flash-lite",
+  "provider": "Google",
+  "system_fingerprint": null,
+  "choices": [
+    {
+      "index": 0,
+      "logprobs": null,
+      "finish_reason": "stop",
+      "native_finish_reason": "STOP",
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"testcases\": [\n    {\n      \"id\": \"LOGIN_01\",\n      \"title\": \"Valid login\",\n      \"type\": \"positive\",\n      \"steps\": [\n        \"Navigate to https://www.saucedemo.com/\",\n        \"Enter a valid username in the username field\",\n        \"Enter a valid password in the password field\",\n        \"Click the Login button\"\n      ],\n      \"expected\": \"The Products page is opened\"\n    },\n    {\n      \"id\": \"LOGIN_02\",\n      \"title\": \"Invalid password\",\n      \"type\": \"negative\",\n      \"steps\": [\n        \"Navigate to https://www.saucedemo.com/\",\n        \"Enter a valid username in the username field\",\n        \"Enter an invalid password in the password field\",\n        \"Click the Login button\"\n      ],\n      \"expected\": \"An error message is shown for invalid password\"\n    },\n    {\n      \"id\": \"LOGIN_03\",\n      \"title\": \"Invalid username\",\n      \"type\": \"negative\",\n      \"steps\": [\n        \"Navigate to https://www.saucedemo.com/\",\n        \"Enter an invalid username in the username field\",\n        \"Enter a valid password in the password field\",\n        \"Click the Login button\"\n      ],\n      \"expected\": \"An error message is shown for invalid username\"\n    },\n    {\n      \"id\": \"LOGIN_04\",\n      \"title\": \"Empty username and password\",\n      \"type\": \"negative\",\n      \"steps\": [\n        \"Navigate to https://www.saucedemo.com/\",\n        \"Leave the username field empty\",\n        \"Leave the password field empty\",\n        \"Click the Login button\"\n      ],\n      \"expected\": \"A validation error is shown\"\n    },\n    {\n      \"id\": \"LOGIN_05\",\n      \"title\": \"Locked user\",\n      \"type\": \"negative\",\n      \"steps\": [\n        \"Navigate to https://www.saucedemo.com/\",\n        \"Enter the username for a locked account in the username field\",\n        \"Enter the corresponding password in the password field\",\n        \"Click the Login button\"\n      ],\n      \"expected\": \"A \\\"locked user\\\" error message is shown\"\n    }\n  ]\n}",
+        "refusal": null,
+        "reasoning": null
+      }
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 628,
+    "completion_tokens": 532,
+    "total_tokens": 1160,
+    "cost": 0.0002756,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0002756,
+      "upstream_inference_prompt_cost": 0.0000628,
+      "upstream_inference_completions_cost": 0.0002128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,21 @@
+You are a senior QA engineer.
+
+Your task generate test scenarios for login functionality.
+
+Rules:
+- Use only information from the checklist
+- Do not invent functionality
+- Output only test scenarios
+- No markdown
+- Cleare structure
+
+CHEKLIST:
+Site: https://www.saucedemo.com/
+Scope:Login only
+
+Checklist:
+1. Valid login -> Products page is opened 
+2. Invalid <REDACTED_SECRET>> error message is shown
+3. Invalid username -> error message is shown
+4. Empty fields -> validation error
+5. Locked user -> locked user error is shown

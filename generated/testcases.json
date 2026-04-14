@@ -1,0 +1,64 @@
+{
+  "testcases": [
+    {
+      "id": "LOGIN_01",
+      "title": "Valid login",
+      "type": "positive",
+      "steps": [
+        "Navigate to https://www.saucedemo.com/",
+        "Enter a valid username in the username field",
+        "Enter a valid password in the password field",
+        "Click the Login button"
+      ],
+      "expected": "The Products page is opened"
+    },
+    {
+      "id": "LOGIN_02",
+      "title": "Invalid password",
+      "type": "negative",
+      "steps": [
+        "Navigate to https://www.saucedemo.com/",
+        "Enter a valid username in the username field",
+        "Enter an invalid password in the password field",
+        "Click the Login button"
+      ],
+      "expected": "An error message is shown for invalid password"
+    },
+    {
+      "id": "LOGIN_03",
+      "title": "Invalid username",
+      "type": "negative",
+      "steps": [
+        "Navigate to https://www.saucedemo.com/",
+        "Enter an invalid username in the username field",
+        "Enter a valid password in the password field",
+        "Click the Login button"
+      ],
+      "expected": "An error message is shown for invalid username"
+    },
+    {
+      "id": "LOGIN_04",
+      "title": "Empty username and password",
+      "type": "negative",
+      "steps": [
+        "Navigate to https://www.saucedemo.com/",
+        "Leave the username field empty",
+        "Leave the password field empty",
+        "Click the Login button"
+      ],
+      "expected": "A validation error is shown"
+    },
+    {
+      "id": "LOGIN_05",
+      "title": "Locked user",
+      "type": "negative",
+      "steps": [
+        "Navigate to https://www.saucedemo.com/",
+        "Enter the username for a locked account in the username field",
+        "Enter the corresponding password in the password field",
+        "Click the Login button"
+      ],
+      "expected": "A \"locked user\" error message is shown"
+    }
+  ]
+}
