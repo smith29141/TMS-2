@@ -7,7 +7,7 @@ export default defineConfig({
   retries: 0,
   reporter: [["list"], ["allure-playwright"]],
   use: {
-    baseURL: "https://playwright.dev",
+    baseURL: "https://www.saucedemo.com",
     trace: "on-first-retry",
     screenshot: "only-on-failure",
     video: "retain-on-failure"
